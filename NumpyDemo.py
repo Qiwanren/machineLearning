@@ -132,7 +132,7 @@ val = np.random.rand()   ### 返回一个数值
 #print(val)
 
 ar2 = np.random.randint(0,10,3)
-#print(ar2)
+print(ar2)
 
 ### 数据洗牌
 ar4 = np.arange(10)
@@ -145,11 +145,11 @@ ar5 = np.random.normal(mu,sigma,10)
 
 ####  文件操作
 
-ar6 = np.loadtxt('D:/data/machineLearn/pyspark/1.txt',delimiter=',')
+#ar6 = np.loadtxt('D:/data/machineLearn/pyspark/1.txt',delimiter=',')
 #print(ar6)
 
 #ar7 = np.loadtxt('D:/data/machineLearn/pyspark/2.txt',str,delimiter=',',skiprows = 1)   ##跳过第一行
-ar7 = np.loadtxt('D:/data/machineLearn/pyspark/2.txt',str,delimiter=',',usecols = (1,2))  ### 只读取1,2, 两列
+#ar7 = np.loadtxt('D:/data/machineLearn/pyspark/2.txt',str,delimiter=',',usecols = (1,2))  ### 只读取1,2, 两列
 
 ##print(ar7)
 
@@ -165,11 +165,11 @@ print(f['x1'])    #读取
 '''
 
 #  保存文件
-ndarray4 = np.array([[1.5,1.3,7.5],[5.6,7.8,1.2]])
-np.savetxt('D:/data/machineLearn/pyspark/3.txt',ndarray4,fmt='%d',delimiter=',')   ## 指定格式为整数，分隔符为 ，
+#ndarray4 = np.array([[1.5,1.3,7.5],[5.6,7.8,1.2]])
+#np.savetxt('D:/data/machineLearn/pyspark/3.txt',ndarray4,fmt='%d',delimiter=',')   ## 指定格式为整数，分隔符为 ，
 
 ### 把一个变量可以存储为npy
 ### 保存为压缩文件
 ar8 = np.arange(10)
-np.savez('1.npz',a=ar8,b=ar7) ## 压缩文件中为多个npy文件
-data = np.load('1.npz')
+#np.savez('1.npz',a=ar8,b=ar7) ## 压缩文件中为多个npy文件
+#data = np.load('1.npz')

@@ -4,6 +4,8 @@
 import pandas as pd
 
 data = pd.read_csv('D:/data/python/machine/GameLog.csv',names=['login_id','login_date','login_ip','use_name','work','sex'],encoding='gbk')
+
+print(data.head)
 ### data = pd.read_csv('D:/data/python/machine/GameLog.csv', header=0) 和上面的语句功能相等
 ## 读取数据后设置列名或者修改列名
 # df_example.columns = ['A','B','C']
@@ -37,8 +39,8 @@ print(data.index)  ###  查看data的信息
 #data1 = data.iloc[0:5]  ## 获取前5行数据
 #data1 = data.iloc[0:5,1:3]  ## 获取前5行数据 ,列索引从零开始，1:3表示把数据的第一列和第二列拿出来
 
-data1 = data.loc['login_ip','use_name','sex']  ## 定位多个列
-print(data1)
+#data1 = data.loc['login_ip','use_name','sex']  ## 定位多个列
+#print(data1.head)
 #data = data.set_index('use_name')
 #print(data.loc['李明克星'])    ###  根据某个索引值进行查询
 #print(data.loc['李明克星','sex'])  ### 根据索引定位后，再看具体的某一列的值
