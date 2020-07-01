@@ -132,7 +132,7 @@ val = np.random.rand()   ### 返回一个数值
 #print(val)
 
 ar2 = np.random.randint(0,10,3)
-print(ar2)
+#print(ar2)
 
 ### 数据洗牌
 ar4 = np.arange(10)
@@ -173,3 +173,7 @@ print(f['x1'])    #读取
 ar8 = np.arange(10)
 #np.savez('1.npz',a=ar8,b=ar7) ## 压缩文件中为多个npy文件
 #data = np.load('1.npz')
+
+
+depths = np.arange(1,10)
+print(depths)

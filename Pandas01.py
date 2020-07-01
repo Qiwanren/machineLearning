@@ -6,7 +6,7 @@ import numpy as np
 
 data = pd.read_csv('D:/data/python/machine/t_base_station_info.csv',names=['id','prov_code','city_code','lac','net_type','node_type','status'],encoding='gbk')
 
-print(data.info(memory_usage='deep'))
+#print(data.info(memory_usage='deep'))
 
 #print(data.iloc[6:8])
 
@@ -159,9 +159,9 @@ df_test = pd.DataFrame({'foo': ['one','one','one','two','two','two','one','one',
 ###df1 = df_test.pivot(index='foo', columns='bar', values='baz')
 df1 = df_test.pivot_table(index='foo', columns='bar', values='baz')   ###  bar为列表头, 默认求baz的平均值
 #df1 = df_test.pivot_table(index='foo', columns='bar', values='baz'，aggfunc='max')  求最大值，当aggfunc='count'表示计数
-print(df1)
-print(df1.sum(axis=1))   ###  对透视图的结果按行求和
-print(df1.sum(axis=0))   ###  对透视图的结果按列求和
+#print(df1)
+#print(df1.sum(axis=1))   ###  对透视图的结果按行求和
+#print(df1.sum(axis=0))   ###  对透视图的结果按列求和
 
 '''
     日期时间操作
@@ -171,11 +171,10 @@ print(df1.sum(axis=0))   ###  对透视图的结果按列求和
         
 '''
 
-
-
-
-
-
+###  获取列的唯一值
+data = pd.DataFrame(['a','a','b','c','d','d','d','d','d','e','e','e','e'],columns=['X'])
+df_list = data['X'].unique()
+print(df_list)
 
 
 
