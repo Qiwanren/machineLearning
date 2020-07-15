@@ -9,4 +9,12 @@ print("-------案例1----------")
 df1['score'] = [80, 98, 67, 90]  # 增加列的元素个数要跟原数据列的个数一样
 print(df1)
 
-df1.to_csv('D:/data/python/machine/sjsl_test.csv')
+#df1.to_csv('D:/data/python/machine/sjsl_test.csv')
+
+###  读取数据
+data = pd.read_csv("D:/data/python/machine/diabetes.csv", usecols=['Pregnancies','Glucose','BloodPressure','SkinThickness','Insulin','BMI','DiabetesPedigreeFunction','Age','Outcome'])
+data1 = data.iloc[:,3:8]
+#print(data1)
+
+data2 = data['Outcome'] == 1
+data2.info()

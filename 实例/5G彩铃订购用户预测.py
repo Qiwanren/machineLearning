@@ -25,11 +25,18 @@ data['fj_arpu'].fillna(data['fj_arpu'].mean(), inplace=True)
 data['ct_voice_fee'].fillna(data['ct_voice_fee'].mean(), inplace=True)
 data['city_flag'].fillna('0', inplace=True)
 
+x = data.iloc[1:10,1:5]
+print(x)
+print(x.corr("spearman"))
+
+
 
 #print(data.isnull())  # 是空值返回True，否则返回False
 #print(np.any(data.isnull()))  # 只要有一个空值便会返回True，否则返回False
 
-X = data.iloc[:,[3,15]]
+
+'''
+    X = data.iloc[:,3:15]
 Y = data.iloc[:,[16]]
 print(X.info())
 print('------------------------------------------------------------------')
@@ -46,4 +53,6 @@ rf = RandomForestClassifier(n_estimators=100, random_state=0)
 rf.fit(x_train, y_train)
 print("Accuracy on training set:{:.3f}".format(rf.score(x_train, y_train)))
 print("Accuracy on test set:{:.3f}".format(rf.score(x_test, y_test)))
+
+'''
 
